@@ -104,15 +104,16 @@ An alist.")
   "Format icon kind with all-the-icons"
   (or (alist-get kind kind-all-the-icons--cache)
       (let ((map (assq kind kind-all-the-icons--icons)))
-          (let*  ((icon (if map
-                            (cdr map)
-                          (cdr (assq t kind-all-the-icons--icons))))
-                  (half (/ (default-font-width) 2))
-                  (pad (propertize " " 'display `(space :width (,half))))
-                  (disp (concat pad icon pad)))
-            (setf (alist-get kind kind-all-the-icons--cache) disp)
-            disp))))
+        (let*  ((icon (if map
+                          (cdr map)
+                        (cdr (assq t kind-all-the-icons--icons))))
+                (half (/ (default-font-width) 2))
+                (pad (propertize " " 'display `(space :width (,half))))
+                (disp (concat pad icon pad)))
+          (setf (alist-get kind kind-all-the-icons--cache) disp)
+          disp))))
 
+;;;###autoload
 (defun kind-all-the-icons-margin-formatter (metadata)
   "Return a margin-formatter function which produces kind icons.
 METADATA is the completion metadata supplied by the caller (see
