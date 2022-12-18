@@ -1,14 +1,15 @@
-;;; kind-all-the-icons.el all-the-icons for Corfu  -*- lexical-binding: t; -*-
+;;; kind-all-the-icons.el --- all-the-icons for Corfu  -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2022 Hirozy
+;; Copyright (C) 2022 ymfsing
 ;;
 ;; Author: Hirozy
-;; Maintainer: Hirozy
+;; Maintainer: ymfsing
 ;; Created: May 9, 2022
-;; Modified: May 9, 2022
+;; Modified: Dec 18, 2022
 ;; Version: 1.0
 ;; Keywords: all-the-icons corfu
-;; Homepage: https://github.com/Hirozy/kind-all-the-icons
+;; Homepage: https://github.com/ymfsing/kind-all-the-icons
 ;; Package-Requires: ((emacs "26.1") (corfu "0.25") (all-the-icons "2.2.0"))
 ;;
 ;; This file is not part of GNU Emacs.
