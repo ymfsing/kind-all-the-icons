@@ -32,6 +32,7 @@
 ;;
 ;;; Code:
 
+(require 'corfu)
 (require 'all-the-icons)
 
 (defvar kind-all-the-icons--cache nil
