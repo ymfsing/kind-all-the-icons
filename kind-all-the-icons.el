@@ -1,4 +1,36 @@
-;;; kind-all-the-icons.el  -*- lexical-binding: t; -*-
+;;; kind-all-the-icons.el all-the-icons for Corfu  -*- lexical-binding: t; -*-
+;;
+;; Copyright (C) 2022 Hirozy
+;;
+;; Author: Hirozy
+;; Maintainer: Hirozy
+;; Created: May 9, 2022
+;; Modified: May 9, 2022
+;; Version: 1.0
+;; Keywords: all-the-icons corfu
+;; Homepage: https://github.com/Hirozy/kind-all-the-icons
+;; Package-Requires: ((emacs "26.1") (corfu "0.25") (all-the-icons "2.2.0"))
+;;
+;; This file is not part of GNU Emacs.
+;;
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;;
+;;; Commentary:
+;;
+;;  all-the-icons for Corfu
+;;
+;;; Code:
 
 (require 'all-the-icons)
 
@@ -70,8 +102,8 @@ An alist.")
   "Format icon kind with all-the-icons"
   (or (alist-get kind kind-all-the-icons--cache)
       (let ((map (assq kind kind-all-the-icons--icons)))
-          (let*  ((icon (if map 
-                            (cdr map) 
+          (let*  ((icon (if map
+                            (cdr map)
                           (cdr (assq t kind-all-the-icons--icons))))
                   (half (/ (default-font-width) 2))
                   (pad (propertize " " 'display `(space :width (,half))))
@@ -92,4 +124,5 @@ function to the relevant margin-formatters list."
 
 
 (provide 'kind-all-the-icons)
+
 ;;; kind-all-the-icons.el ends here
